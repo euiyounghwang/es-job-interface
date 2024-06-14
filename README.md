@@ -1,7 +1,5 @@
 # es-job-interface
 <i>es-job-interface
-# prometheus-export
-<i>python-prometheus-export
 
 FastAPI is a modern, fast (high-performance), web framework for building APIs with Python 3.8+ based on standard Python.
 This is a repository that provides to deliver the records to the Prometheus-Export application.
