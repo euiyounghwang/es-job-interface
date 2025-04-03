@@ -11,4 +11,11 @@ load_dotenv()
 logger = create_log()
 
 
-DBHandlerInject = DBHandler(logger)
+def read_config_json(path):
+    with open(path, "r") as read_file:
+        data = json.load(read_file)
+        return data
+
+sql_repo = read_config_json("./repository/config.json")
+
+DBHandlerInject = DBHandler(logger, sql_repo)

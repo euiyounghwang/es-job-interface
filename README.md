@@ -5,6 +5,19 @@ FastAPI is a modern, fast (high-performance), web framework for building APIs wi
 This is a repository that provides to deliver the records to the Prometheus-Export application.
 
 
+### Install Poerty
+```
+https://python-poetry.org/docs/?ref=dylancastillo.co#installing-with-the-official-installer
+```
+
+
+### Using Python Virtual Environment
+```bash
+python -m venv .venv
+source .venv/bin/activate
+```
+
+
 #### Python V3.9 Install
 ```bash
 sudo yum install gcc openssl-devel bzip2-devel libffi-devel zlib-devel git 
@@ -63,7 +76,7 @@ or you can run this shell script `./create_virtual_env.sh` to make an environmen
 ### Register Service
 - sudo service es_job_interface_api status/stop/start/restart
 ```bash
-#-- /etc/systemd/system/es_config_interface_api.service
+#-- /etc/systemd/system/es_job_interface_api.service
 [Unit]
 Description=ES Data Pipeline Interface Service between DB and Elasticsearch Cluster
 
@@ -71,7 +84,7 @@ Description=ES Data Pipeline Interface Service between DB and Elasticsearch Clus
 User=devuser
 Group=devuser
 Type=simple
-ExecStart=/bin/bash /home/devuser/es_job_interface_api/service-start.sh
+ExecStart=/bin/bash /home/devuser/rest_api/es_job_interface_api/service-start.sh
 ExecStop= /usr/bin/killall /es_job_interface_api
 
 [Install]
